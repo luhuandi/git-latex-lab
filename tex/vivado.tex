@@ -1,0 +1,71 @@
+\chapter{Vivado学习记录}
+\section{Vivado 使用操作}
+\subsection{工程操作}
+\begin{enumerate}
+    \item 打开已有工程：Open Project打开.xpr文件
+    \item 清理vivado工程：
+\end{enumerate}
+
+\subsection{调试操作}
+\begin{enumerate}
+    \item 出现syntax error表示文件出现语法错误
+\end{enumerate}
+
+\section{代码记录}
+
+\begin{minted}{vhdl}
+--这是单行注释
+/*
+这是
+多行注释
+VHDL基本语法结构
+*/
+
+--VHDL不区分大小写
+--library 
+--library的声明
+LIBRARY library_name;
+USE ieee.std_logic_1164.all;--std_logic_1164是package_name,all是package_parts
+--entity
+ENTITY test_logic is
+    PORT(
+        a,b,c,d :IN STD_LOGIC;--STD_LOGIC是IN的数据类型
+        and_out,or_out;OUT STD_LOGIC --PORT里面最后一行不用加分号;
+    );
+end entity test_logic;
+
+--architecture
+architecture bhv of test_logic is
+--[declarations]这里的声明部分为可选，用于对信号和常量等进行声明
+BEGIN
+    and_out<= a AND b;
+    or_out <=c Or d;
+end architecture bhv ;
+\end{minted}
+
+\begin{minted}{verilog}
+/*
+verilog中是模块体
+assign语句是赋值语句，对wire类型数据有用
+*/
+module test(CLK,D,Q);//模块名后紧跟端口名
+    output Q;
+    input CLK ,D;
+    reg Q;//寄存器类型
+    always @(event)//敏感列表，()里只要有变化就执行begin的内容
+/*包括边沿敏感和电平敏感,posedge上升沿到来,negedge下降沿到来
+always只对reg的数据类型起作用*/
+    begin
+        Q<=D;
+    end
+
+endmodule
+\end{minted}
+
+\begin{myminted}[title=状态机语法]{verilog}
+/*完整的状态机包含：
+状态寄存器
+次态逻辑
+输出逻辑*/
+parameter =;
+\end{myminted}

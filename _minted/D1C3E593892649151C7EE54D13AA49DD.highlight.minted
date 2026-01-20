@@ -1,0 +1,61 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+
+\PYG{c+c1}{//UI界面的界面布局可以添加Widget窗口后，再选中mainwindow,点击水平或垂直布局}
+
+\PYG{+w}{ }\PYG{c+c1}{//::在C++表示作用域解析运算符,用于明确指定某个标识符属于哪个作用域}
+\PYG{c+cm}{/* void Widget::initPortSettings()}
+\PYG{c+cm}{\PYGZob{}}
+
+\PYG{c+cm}{\PYGZcb{}}
+\PYG{c+cm}{不是在调用函数，而是在定义函数}
+\PYG{c+cm}{*/}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{argc}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{char}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{argv}\PYG{p}{[}\PYG{p}{]}\PYG{p}{)}\PYG{c+c1}{//必须使用两个参数的main函数，通过参数创建Qt应用程序}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{QApplication}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{(}\PYG{n}{argc}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{argv}\PYG{p}{)}\PYG{p}{;}\PYG{c+c1}{//应用程序实例对象，有且只能一个}
+\PYG{+w}{    }\PYG{n}{Widget}\PYG{+w}{ }\PYG{n}{w}\PYG{p}{;}\PYG{c+c1}{//创建窗口对象w}
+\PYG{+w}{    }\PYG{c+cm}{/*创建类的对象有两种方法}
+\PYG{c+cm}{     1.如像上面的方式创建：在栈内存上创建对象，对象可以使用.(成员运算符)直接访问成员和方法}
+\PYG{c+cm}{    是一种静态联编，为xxx创建了地址空间}
+\PYG{c+cm}{     2.使用指针创建：在堆内存上创建对象}
+\PYG{c+cm}{    Widget* window;}
+\PYG{c+cm}{    window=new Widget;}
+\PYG{c+cm}{    \PYGZhy{}\PYGZgt{}等价于（*window）.;}
+\PYG{c+cm}{    */}
+\PYG{+w}{    }\PYG{n}{w}\PYG{p}{.}\PYG{n}{show}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}\PYG{c+c1}{//显示窗口}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{.}\PYG{n}{exec}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}\PYG{c+c1}{//Qt进入消息循环}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+cm}{/*}
+\PYG{c+cm}{对于创建对象实例两种方法的比喻和理解：}
+
+\PYG{c+cm}{*/}
+
+\PYG{c+c1}{//另一个.cpp文件里的代码，这里学习下构造函数和初始化列表的知识}
+\PYG{n}{Widget}\PYG{o}{:}\PYG{o}{:}\PYG{n}{Widget}\PYG{p}{(}\PYG{n}{QWidget}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{parent}\PYG{p}{)}
+\PYG{+w}{    }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{QWidget}\PYG{p}{(}\PYG{n}{parent}\PYG{p}{)}\PYG{c+c1}{//初始化函数列表1}
+\PYG{+w}{    }\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ui}\PYG{p}{(}\PYG{k}{new}\PYG{+w}{ }\PYG{n}{Ui}\PYG{o}{:}\PYG{o}{:}\PYG{n}{Widget}\PYG{p}{)}\PYG{c+c1}{//初始化列表2}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{ui}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}}\PYG{n}{setupUi}\PYG{p}{(}\PYG{k}{this}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//设置窗口标题}
+\PYG{+w}{    }\PYG{k}{this}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}}\PYG{n}{setWindowTitle}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{雷达参数配置及CLI命令设置界面}\PYG{l+s}{\PYGZdq{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//设置窗口图标}
+\PYG{+w}{    }\PYG{c+c1}{// this\PYGZhy{}\PYGZgt{}setWindowIcon(QIcon());}
+\PYG{+w}{    }\PYG{n}{initPortSettings}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{c+c1}{//创建对象并实例化：监听的服务器对象}
+\PYG{+w}{    }\PYG{n}{m\PYGZus{}s}\PYG{o}{=}\PYG{+w}{ }\PYG{k}{new}\PYG{+w}{ }\PYG{n}{QTcpServer}\PYG{p}{(}\PYG{k}{this}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//启动监听服务；；；；这里注意：使用传到槽就不要使用connect，如果使用connect就不要使用转到槽}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{c+cm}{/*类的继承}
+\PYG{c+cm}{*/}
+
+\PYG{k}{class}\PYG{+w}{ }\PYG{n+nc}{Shape}\PYG{o}{:}\PYG{+w}{ }\PYG{k}{public}\PYG{+w}{ }\PYG{n}{rectangle}\PYG{p}{\PYGZob{}}
+
+\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+
+\PYG{c+c1}{//创建socket界面}
+
+\end{MintedVerbatim}

@@ -1,0 +1,67 @@
+\chapter{Latex使用}
+
+\section{原样输出}
+\begin{minted}{tex}
+   行内原样输出:\par
+    \verb|\verb||代码或文字|
+
+    多行原样输出：\par
+    \begin{lstlisting}
+    \begin{verbatim}
+    多行代码
+    \end{verbatim}
+    \end{lstlisting}
+
+ 
+\end{minted}
+
+\section{代码显示}
+可以使用宏包\verb|\usepackage{listing}|或者\verb|\usepackage{minted}|\par
+但是添加宏包后，需要对宏包进行参数设置，添加配置，本文档使用了minted宏包并在note.sty中进行了配置
+\section{字体颜色}
+
+\begin{verbatim}
+\textcolor{red}{红色文字}
+\end{verbatim}
+
+
+\section{注释}
+\verb|\footnote{正文部分}| 
+
+\section{网址链接}
+\verb|\url{https://www.example.com}|\par
+\textcolor{red}{对于较长的网址，要保证正文对其，在配置页面添加新的package}，\verb|\usepackage{xurl}|
+
+\section{超链接}
+\verb|\href{https://www.example.com}{点击这里访问网站}|\par
+\textcolor{blue}{超链接，不显示网址，直接点击文字跳转}
+
+\section{自定义颜色}
+
+\section{图片导入}
+\begin{minted}{tex}
+    \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.9\linewidth]{figure/sw_load.png}  //[]中的是反斜杠
+    \caption{设置雷达芯片型号}
+    \label{fig:设置雷达芯片型号}
+    \end{figure}
+\end{minted}
+
+
+\section{表格}
+\begin{minted}{tex}
+  \begin{table}[htbp]
+    \centering
+    begin{tabular}{|c|c|c|}
+    \hline
+    模式&  描述&开关设置\\
+    \hline
+    1.刷写模式& 雷达芯片初始化-USB &S1: 0100  S4: 0000\\
+    \hline
+    \end{tabular}
+    \caption{刷写模式开关设置}
+    \label{tab:刷写模式开关设置}
+\end{table}  
+\end{minted}
+

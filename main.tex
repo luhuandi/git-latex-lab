@@ -1,0 +1,65 @@
+\documentclass[11pt,oneside,a4paper,english]{report}
+\usepackage{tex/note}
+\def\0vbb{$0\nu\beta\beta$}
+\def\2vbb{$2\nu\beta\beta$}
+
+
+%Ressource
+\addbibresource{tex/bib.bib}
+\graphicspath{{latex_test/}{figure/}}
+
+
+%%%%% Abstract if needed
+\Abstract{平时笔记文档}
+
+
+
+\author{}
+\date{}
+
+% % % % % % % % % % % % % % % % % % % % %
+\makeatletter
+\begin{document}
+
+\pagenumbering{roman}
+		\input{tex/metadata.tex}
+  
+		% \input{tex/titlepage.tex}
+		\pagebreak{}
+			
+%\pagestyle{empty}
+%\maketitle
+
+\tableofcontents
+\newpage
+\pagestyle{plain}
+\input{tex/changes.tex}
+
+
+\pagebreak
+
+\onehalfspacing
+\pagenumbering{arabic}
+
+
+\input{tex/ch1-Git.tex}
+\input{tex/ch2-picoVersion1.tex}
+
+
+%\appendix
+%\input{tex/app-reg}
+
+\newpage
+ 
+% \printbibliography
+\end{document}
+% \begin{document}
+
+% \section{2025/09/25}
+% \subsection{allegro}
+% \begin{enumerate}
+%     \item PCB布线的宽度遵循3W原则，两条线宽是1.5倍的线宽
+%     \item 需要区分模拟地和数字地？
+% \end{enumerate}
+
+% \end{document}

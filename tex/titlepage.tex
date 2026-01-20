@@ -1,0 +1,68 @@
+\begin{titlepage}
+  \begin{minipage}{\linewidth}
+    \begin{minipage}[c][35mm][t]{0.20\linewidth}
+      \includegraphics[height=30mm]{nel.pdf}
+    \end{minipage}
+    \hspace*{\fill}
+    \begin{minipage}[c][35mm][c]{0.50\linewidth}
+      \centering
+        {\fontsize{20}{24}\selectfont
+          \textbf{\type}\par
+        }
+        \vspace*{2ex}
+          {\Large \docid}\par 
+        \vspace*{2ex}
+        % Date, if any
+        \ifx\@date\@empty
+          \mbox{}\par
+        \else
+          \vhCurrentDate\par
+        \fi
+    \end{minipage}
+    \hspace*{\fill}
+    \begin{minipage}[c][35mm][t]{0.20\linewidth}
+      \flushright\includegraphics[height=30mm]{ccnu.png}
+
+        \flushright\normalsize Version \vhCurrentVersion 
+
+    \end{minipage}
+  \end{minipage}\par
+\vfill
+{\centering
+    {\bfseries\fontsize{16}{19.2}\selectfont \mrcolor{\notetitle} \par}
+    \vskip 3em
+    {\large
+     \lineskip .75em
+     \begin{tabular}[t]{c}
+       \mbcolor{\authorname}
+     \end{tabular}\par}
+ \hypersetup{pdftitle={\notetitle}, pdfauthor={\authorname}}
+}\par
+\vspace{\stretch{0.5}}
+
+
+
+
+\if\AbstractText\@empty
+    \mbox{}
+\else
+    {\centering
+ 	\bfseries\fontsize{12}{14.4}\selectfont
+ 	\abstractname\par
+    }
+    {\fontseries{m}\fontsize{11}{13.2}\selectfont%
+ 	\begin{quote}
+ 		\AbstractText
+ 	\end{quote}
+    }
+\fi
+
+\vfill
+% Copyright
+\parbox[b]{\linewidth}{%
+    \small
+    \copyright\ \the\year\ \mrcolor{\lab}\ in \mgcolor{Central China Normal University}. All rights reserved.
+}\par
+
+
+\end{titlepage}

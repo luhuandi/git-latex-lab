@@ -1,0 +1,7 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{n}{connect}\PYG{p}{(}\PYG{n}{ui}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}}\PYG{p}{,}\PYG{o}{\PYGZam{}}\PYG{p}{,}\PYG{k}{this}\PYG{p}{,}\PYG{o}{\PYGZam{}}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+cm}{/*connect函数是连接信号和槽，并且可以连接一个信号与多个槽；}
+\PYG{c+cm}{    注意这里connect只负责“连接”（建立联系），只有信号发出才会真正建立连接*/}
+\PYG{+w}{    }\PYG{c+cm}{/*********************/}
+\PYG{+w}{    }\PYG{c+c1}{//信号还可以连接信号}
+\end{MintedVerbatim}

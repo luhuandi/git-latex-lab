@@ -1,0 +1,13 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+   行内原样输出:\PYG{k}{\PYGZbs{}par}
+    \PYG{k}{\PYGZbs{}verb}|\PYG{k}{\PYGZbs{}verb}||代码或文字|
+
+    多行原样输出：\PYG{k}{\PYGZbs{}par}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}lstlisting\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}begin}\PYG{n+nb}{\PYGZob{}}verbatim\PYG{n+nb}{\PYGZcb{}}
+    多行代码
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}verbatim\PYG{n+nb}{\PYGZcb{}}
+    \PYG{k}{\PYGZbs{}end}\PYG{n+nb}{\PYGZob{}}lstlisting\PYG{n+nb}{\PYGZcb{}}
+
+
+\end{MintedVerbatim}

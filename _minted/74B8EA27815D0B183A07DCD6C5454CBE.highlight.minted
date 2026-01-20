@@ -1,0 +1,29 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}这是单行注释}
+\PYG{c+cm}{/*}
+\PYG{c+cm}{这是}
+\PYG{c+cm}{多行注释}
+\PYG{c+cm}{VHDL基本语法结构}
+\PYG{c+cm}{*/}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}VHDL不区分大小写}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}library}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}library的声明}
+\PYG{k}{LIBRARY}\PYG{+w}{ }\PYG{n+nn}{library\PYGZus{}name}\PYG{p}{;}
+\PYG{k}{USE}\PYG{+w}{ }\PYG{n+nn}{ieee.std\PYGZus{}logic\PYGZus{}1164.}\PYG{k}{all}\PYG{p}{;}\PYG{c+c1}{\PYGZhy{}\PYGZhy{}std\PYGZus{}logic\PYGZus{}1164是package\PYGZus{}name,all是package\PYGZus{}parts}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}entity}
+\PYG{k}{ENTITY}\PYG{+w}{ }\PYG{n+nc}{test\PYGZus{}logic}\PYG{+w}{ }\PYG{k}{is}
+\PYG{+w}{    }\PYG{k}{PORT}\PYG{p}{(}
+\PYG{+w}{        }\PYG{n}{a}\PYG{p}{,}\PYG{n}{b}\PYG{p}{,}\PYG{n}{c}\PYG{p}{,}\PYG{n}{d}\PYG{+w}{ }\PYG{o}{:}\PYG{k}{IN}\PYG{+w}{ }\PYG{k+kt}{STD\PYGZus{}LOGIC}\PYG{p}{;}\PYG{c+c1}{\PYGZhy{}\PYGZhy{}STD\PYGZus{}LOGIC是IN的数据类型}
+\PYG{+w}{        }\PYG{n}{and\PYGZus{}out}\PYG{p}{,}\PYG{n}{or\PYGZus{}out}\PYG{p}{;}\PYG{k}{OUT}\PYG{+w}{ }\PYG{k+kt}{STD\PYGZus{}LOGIC}\PYG{+w}{ }\PYG{c+c1}{\PYGZhy{}\PYGZhy{}PORT里面最后一行不用加分号;}
+\PYG{+w}{    }\PYG{p}{)}\PYG{p}{;}
+\PYG{k}{end}\PYG{+w}{ }\PYG{k}{entity}\PYG{+w}{ }\PYG{n+nc}{test\PYGZus{}logic}\PYG{p}{;}
+
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}architecture}
+\PYG{k}{architecture}\PYG{+w}{ }\PYG{n+nc}{bhv}\PYG{+w}{ }\PYG{k}{of}\PYG{+w}{ }\PYG{n+nc}{test\PYGZus{}logic}\PYG{+w}{ }\PYG{k}{is}
+\PYG{c+c1}{\PYGZhy{}\PYGZhy{}[declarations]这里的声明部分为可选，用于对信号和常量等进行声明}
+\PYG{k}{BEGIN}
+\PYG{+w}{    }\PYG{n}{and\PYGZus{}out}\PYG{o}{\PYGZlt{}}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{k}{AND}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{or\PYGZus{}out}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{o}{=}\PYG{n}{c}\PYG{+w}{ }\PYG{k}{Or}\PYG{+w}{ }\PYG{n}{d}\PYG{p}{;}
+\PYG{k}{end}\PYG{+w}{ }\PYG{k}{architecture}\PYG{+w}{ }\PYG{n+nc}{bhv}\PYG{+w}{ }\PYG{p}{;}
+\end{MintedVerbatim}

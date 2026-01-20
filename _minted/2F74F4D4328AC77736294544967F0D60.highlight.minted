@@ -1,0 +1,18 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+cm}{/*}
+\PYG{c+cm}{verilog中是模块体}
+\PYG{c+cm}{assign语句是赋值语句，对wire类型数据有用}
+\PYG{c+cm}{*/}
+\PYG{k}{module}\PYG{+w}{ }\PYG{n}{test}\PYG{p}{(}\PYG{n}{CLK}\PYG{p}{,}\PYG{n}{D}\PYG{p}{,}\PYG{n}{Q}\PYG{p}{)}\PYG{p}{;}\PYG{c+c1}{//模块名后紧跟端口名}
+\PYG{+w}{    }\PYG{k}{output}\PYG{+w}{ }\PYG{n}{Q}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{input}\PYG{+w}{ }\PYG{n}{CLK}\PYG{+w}{ }\PYG{p}{,}\PYG{n}{D}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{reg}\PYG{+w}{ }\PYG{n}{Q}\PYG{p}{;}\PYG{c+c1}{//寄存器类型}
+\PYG{+w}{    }\PYG{k}{always}\PYG{+w}{ }\PYG{p}{@}\PYG{p}{(}\PYG{k}{event}\PYG{p}{)}\PYG{c+c1}{//敏感列表，()里只要有变化就执行begin的内容}
+\PYG{c+cm}{/*包括边沿敏感和电平敏感,posedge上升沿到来,negedge下降沿到来}
+\PYG{c+cm}{always只对reg的数据类型起作用*/}
+\PYG{+w}{    }\PYG{k}{begin}
+\PYG{+w}{        }\PYG{n}{Q}\PYG{o}{\PYGZlt{}}\PYG{o}{=}\PYG{n}{D}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{end}
+
+\PYG{k}{endmodule}
+\end{MintedVerbatim}

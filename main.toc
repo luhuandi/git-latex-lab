@@ -1,0 +1,7 @@
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\numberline {1}Git}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Basic Concept}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}note}{1}{section.1.2}%
+\contentsline {chapter}{\numberline {2}pico TDC version1 整理}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Git的基本操作}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}gitlab上项目结构}{2}{section.2.2}%

@@ -1,0 +1,231 @@
+\usepackage[left=2.5cm,top=3cm,right=2.5cm,bottom=3cm,bindingoffset=0.5cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\setlength{\parskip}{\medskipamount}
+\setlength{\parindent}{0pt}
+\usepackage{babel}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{varioref}
+\usepackage{vhistory}
+\renewcommand \vhAuthorColWidth{.2\hsize}
+\renewcommand \vhChangeColWidth{.5\hsize}
+\usepackage[unicode=true,pdfusetitle,
+bookmarks=true,bookmarksnumbered=false,bookmarksopen=false, breaklinks=false,pdfborder={0 0 0},backref=false,colorlinks=false] {hyperref}
+\usepackage{graphicx}
+\usepackage{setspace}
+%\usepackage{cleveref}
+\usepackage{icomma}
+\usepackage{tabu,booktabs}
+\usepackage{times}
+\usepackage[UTF8]{ctex}
+\usepackage{xurl}
+
+\usepackage{todonotes}
+
+
+
+%\usepackage[citestyle=numeric,style=numeric,backend=bibtex,sorting=none]{biblatex}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,citecolor=blue,linkcolor=blue,urlcolor=blue,breaklinks=true}
+
+\widowpenalties=3 10000 10000 150
+
+\usepackage[table]{xcolor}
+
+
+\definecolor{mygreen}{RGB}{0,128,0}
+\definecolor{myred}{RGB}{192,0,0}
+\definecolor{myblue}{RGB}{64,64,192}
+
+\definecolor{fgVeryLightRed}{RGB}{248,226,224}
+\definecolor{fgLightRed}{RGB}{241,167,159} 
+\newcommand\mrcolor[1]{{\color{myred}{#1}}}
+\newcommand\mgcolor[1]{{\color{mygreen}{#1}}}
+\newcommand\mbcolor[1]{{\color{myblue}{#1}}}
+\newcommand\rcolor[1]{{\color{red}{#1}}}
+\newcommand\gcolor[1]{{\color{green}{#1}}}
+\newcommand\ccolor[1]{{\color{cyan}{#1}}}
+\newcommand\bcolor[1]{{\color{blue}{#1}}}
+\newcommand\mcolor[1]{{\color{magenta}{#1}}}
+\newcommand\ocolor[1]{{\color{orange}{#1}}}
+\newcommand\vcolor[1]{{\color{violet}{#1}}}
+\newcommand\tcolor[1]{{\color{teal}{#1}}}
+
+\newcommand\mrbbox[1]{{\colorbox{myred}{#1}}}
+\newcommand\mgbbox[1]{{\colorbox{mygreen}{#1}}}
+\newcommand\mbbbox[1]{{\colorbox{myblue}{#1}}}
+\newcommand\rbbox[1]{{\colorbox{red}{#1}}}
+\newcommand\gbbox[1]{{\colorbox{green}{#1}}}
+\newcommand\bbbox[1]{{\colorbox{blue}{#1}}}
+\newcommand\cbbox[1]{{\colorbox{cyan}{#1}}}
+\newcommand\mbbox[1]{{\colorbox{magenta}{#1}}}
+\newcommand\obbox[1]{{\colorbox{orange}{#1}}}
+\newcommand\vbbox[1]{{\colorbox{violet}{#1}}}
+\newcommand\tbbox[1]{{\colorbox{teal}{#1}}}
+
+\usepackage[most, minted]{tcolorbox}
+\newtcolorbox{rquote}{colback=red!5!white, colframe=red!75!black}
+\newcommand\rblock[1]{{\begin{rquote}{#1}\end{rquote}}}
+\newtcolorbox{gquote}{colback=green!5!white, colframe=green!75!black}
+%\newcommand\gblock[2]{{\begin{gquote}{#1}{#2}\end{gquote}}}
+\newcommand\gblock[1]{{\begin{gquote}{#1}\end{gquote}}}
+\newtcolorbox{bquote}{colback=blue!5!white, colframe=blue!75!black}
+\newcommand\bblock[1]{{\begin{bquote}{#1}\end{bquote}}}
+
+
+\usepackage{framed}
+%\newcommand\bewarn[1]{{\begin{leftbar}\noindent
+%{\textbf{\textcolor{red}{Warning} : }#1}
+%\end{leftbar}}}
+
+
+%\newcommand\bewarn[1]{{\hspace*{-1.95cm} \textbf{\textcolor{red}{Warning}} \vspace*{-0.95cm} \begin{leftbar}\noindent{#1}\end{leftbar}}}
+
+\newcommand\bewarn[1]{\begin{leftbar}\noindent\hspace*{-2.4cm} \textbf{\textcolor{myred}{Warning}} \hspace*{0.60cm}
+{#1}
+\end{leftbar}}
+
+%\newcommand\benote[1]{{\hspace*{-1.25cm} \textbf{\textcolor{blue}{Note}} \vspace*{-0.95cm} \begin{leftbar}\noindent
+%{#1}
+%\end{leftbar}}}
+
+
+\newcommand\benote[1]{\begin{leftbar}\noindent\hspace*{-1.7cm} \textbf{\textcolor{myblue}{Note}} \hspace*{0.58cm}
+{#1}
+\end{leftbar}}
+
+
+%\newcommand\benote[1]{{\begin{leftbar}\noindent
+%{\textbf{\textcolor{blue}{Note} : }#1}
+%\end{leftbar}}}
+
+\usepackage{xcolor}
+\usepackage{comment}
+\usepackage[backend=bibtex,style=numeric-comp,sorting=none,giveninits=true]{biblatex}
+%\usepackage[citestyle=numeric]{biblatex}
+
+
+\usepackage{maybemath}
+\usepackage{booktabs}
+\usepackage{comment}
+\usepackage{ifthen}
+%\usepackage{titlesec}  % To create a \subsubsubsection
+\usepackage{pdfpages}  % Adding PDF documents into the latex
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{vhistory}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{subcaption}
+\usepackage{boldline}
+
+\usepackage{rotating}
+\usepackage{minted}
+%\usepackage[most, minted]{tcolorbox}
+\tcbuselibrary{minted,skins,listings,breakable}
+\definecolor{bg}{rgb}{0.95,0.95,0.95}
+\setminted{style=emacs,
+	obeytabs=true,
+	tabsize=4,
+	linenos=true, 
+	breaklines=true, 
+	breakbefore=., 
+	fontsize=\footnotesize, 
+	frame=lines,%single,%none
+	numbersep=3mm,
+	framesep=3mm
+}
+
+
+\newtcblisting{myminted}[2][]{%
+	listing engine=minted,
+	minted language=#2,
+	listing only,
+	breakable,
+	enhanced,
+	minted options = {
+		style=emacs,
+		obeytabs=true,
+		tabsize=4,
+		linenos=true, 
+		breaklines=true, 
+		breakbefore=., 
+		fontsize=\footnotesize, 
+		frame=none,
+		numbersep=3mm
+	},
+	overlay={%
+		\begin{tcbclipinterior}
+			\fill[gray!25] (frame.south west) rectangle ([xshift=4mm]frame.north west);
+		\end{tcbclipinterior}
+	},
+	#1   
+}
+
+% 定义 cpp 样式
+\lstdefinestyle{cpp}{
+    language=C++,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{green!50!black},
+    stringstyle=\color{red},
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    frame=single,
+    breaklines=true,
+    captionpos=b,
+    tabsize=4,
+    showspaces=false,
+    showstringspaces=false
+}
+
+
+\newcommand\blue  {\textcolor{blue}}
+\newcommand\question{\textcolor{red}}
+\newcommand\red{\textcolor{red}}
+\newcommand\black {\textcolor{black}}
+\newcommand\olive {\textcolor{olive}}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks,breaklinks}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}
+
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+\setcounter{table}{-1}
+
+\def\AbstractText{}
+\newcommand{\Abstract}[1]{\def\AbstractText{#1}}
+
+%\usepackage[CJKspace]{xeCJK}
+\usepackage{xeCJK}
+
+%\usepackage{xpinyin}
+%\usepackage{helvet}
+
+% \setmainfont{Noto Serif Light}
+% \setsansfont{Noto Sans}
+% \setmonofont[Scale=MatchLowercase]{Noto Mono}
+
+% \setCJKmainfont{Noto Serif CJK SC}
+% \setCJKsansfont{Noto Sans CJK SC}
+% \setCJKmonofont{Noto Sans Mono CJK SC}
+% ---- new by cjp ------
+
+
+% \setCJKmainfont{Source Han Serif SC}  % 思源宋体
+% \setCJKsansfont{Source Han Sans SC}   % 思源黑体
+
+\setCJKmainfont{SimSun}  % 正文使用宋体
+\setCJKsansfont{SimHei}  % 无衬线文字使用黑体
+
+\usepackage{newpxtext,newpxmath}
+
+\usepackage{sectsty}
+
+\chapternumberfont{\huge} 
+%\chaptertitlefont{\Huge}
+\chaptertitlefont{\LARGE}
