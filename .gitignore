@@ -1,0 +1,12 @@
+# LaTeX 临时文件
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.synctex.gz.sum.synctex
+*.fdb_latexmk
+*.fls
+
+# 编译输出文件
+*.pdf

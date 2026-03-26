@@ -3,4 +3,6 @@
 
 \PYG{+w}{    }git\PYG{+w}{ }remote\PYG{+w}{ }\PYGZhy{}v\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{}查看远程仓库}
 \PYG{+w}{    }git\PYG{+w}{ }push\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }\PYGZlt{}remote\PYGZhy{}name\PYGZgt{}\PYG{+w}{ }\PYGZlt{}branch\PYGZhy{}name\PYGZgt{}\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{}推送到远程}
+
+\PYG{+w}{    }git\PYG{+w}{ }push\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{}再次提交后可以省略,注意要完成git add和commit操作}
 \end{MintedVerbatim}
