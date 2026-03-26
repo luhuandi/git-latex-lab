@@ -10,3 +10,14 @@
 
 # 编译输出文件
 *.pdf
+
+
+# 更多 LaTeX 临时文件
+*.bib
+*.hst
+*.listing
+*.run.xml
+*.ver
+
+# Minted 缓存文件夹
+_minted/
