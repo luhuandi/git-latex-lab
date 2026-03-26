@@ -1,4 +1,0 @@
-\begin{MintedVerbatim}[commandchars=\\\{\}]
-\PYG{+w}{    }git\PYG{+w}{ }add\PYG{+w}{ }.\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{}添加所有文件}
-\PYG{+w}{    }git\PYG{+w}{ }commit\PYG{+w}{ }\PYGZhy{}m\PYG{+w}{ }\PYG{l+s+s2}{\PYGZdq{}commit statement\PYGZdq{}}\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{}提交更改}
-\end{MintedVerbatim}
