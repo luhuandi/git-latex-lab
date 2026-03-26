@@ -1,0 +1,6 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }git\PYG{+w}{ }remote\PYG{+w}{ }add\PYG{+w}{ }\PYGZlt{}remote\PYGZhy{}name\PYGZgt{}\PYG{+w}{ }\PYGZlt{}remote\PYGZhy{}url\PYGZgt{}\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{}添加远程仓库，\PYGZlt{}remote\PYGZhy{}name\PYGZgt{}是自定义名称，\PYGZlt{}remote\PYGZhy{}url\PYGZgt{}是远程仓库的URL}
+
+\PYG{+w}{    }git\PYG{+w}{ }remote\PYG{+w}{ }\PYGZhy{}v\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{}查看远程仓库}
+\PYG{+w}{    }git\PYG{+w}{ }push\PYG{+w}{ }\PYGZhy{}u\PYG{+w}{ }\PYGZlt{}remote\PYGZhy{}name\PYGZgt{}\PYG{+w}{ }\PYGZlt{}branch\PYGZhy{}name\PYGZgt{}\PYG{+w}{ }\PYG{c+c1}{\PYGZsh{}推送到远程}
+\end{MintedVerbatim}

@@ -1,0 +1,4 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }git\PYG{+w}{ }branch\PYG{+w}{  }\PYG{c+c1}{\PYGZsh{}查看本地分支}
+\PYG{+w}{    }git\PYG{+w}{ }branch\PYG{+w}{ }\PYGZhy{}a\PYG{+w}{  }\PYG{c+c1}{\PYGZsh{}查看所有分支(含远程)}
+\end{MintedVerbatim}

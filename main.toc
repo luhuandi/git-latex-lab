@@ -5,3 +5,10 @@
 \contentsline {chapter}{\numberline {2}pico TDC version1 整理}{2}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Git的基本操作}{2}{section.2.1}%
 \contentsline {section}{\numberline {2.2}gitlab上项目结构}{2}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Common Git Operations}{3}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Configuration}{3}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Basic Operations}{3}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Remote Operations}{4}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Branch Operations}{4}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Undo \& Revert}{4}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Differences}{4}{section.3.6}%
