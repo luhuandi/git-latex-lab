@@ -22,6 +22,8 @@
 
 \textbf{SSH configuration}
 
+
+\newpage
 \section{Basic Operations}
 \begin{myminted}{bash}
     git add . #添加所有文件
@@ -31,8 +33,11 @@
     code .gitignore #code 为git bash 默认的文本编辑器
 \end{myminted}
 
+\benote{一定要写清楚commit备注,只有commit的文件才可回退.}
+
 
 \section{Remote Operations}
+\subsection{PUSH}
 \begin{myminted}{bash}
     git remote add <remote-name> <remote-url> #添加远程仓库，<remote-name>是自定义名称，<remote-url>是远程仓库的URL
 
@@ -42,13 +47,37 @@
     git push #再次提交后可以省略,注意要完成git add和commit操作
 \end{myminted}
 
-\textbf{pull remote repository}
+\subsection{PULL}
+
+Clone \& Pull from the Github
+\begin{myminted}{bash}
+    git clone <SSH-link> #在本地直接clone来自Github上的项目,将会在本地打开Git Bash的文件夹内直接创建新的该项目文件夹
+
+    # pull 本地上传到Github上并修改过的文件
+    git pull # 直接pull,Git 会自动更新文件
+\end{myminted}
+\textbf{Note}
+
+关于pull的3种情况做如下说明:
+\begin{itemize}
+    \item 本地无修改，远程有新提交
+    
+    git pull 
+    \item 本地有修改，远程有新提交(不同文件)
+    
+    git pull, 自动更新
+    \item 本地有修改，远程有新提交(同一文件冲突)
+    
+    \textcolor{red}{需要手动合并,具体情况见后续实例}
+\end{itemize}
 
 \section{Branch Operations}
 \begin{myminted}{bash}
     git branch  #查看本地分支
     git branch -a  #查看所有分支(含远程)
 \end{myminted}
+
+
 
 \section{Undo \& Revert}
 \begin{myminted}{bash}
